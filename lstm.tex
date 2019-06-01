@@ -1,0 +1,500 @@
+\documentclass[]{article}
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage[colorlinks,linkcolor=red,anchorcolor=blue,citecolor=green,CJKbookmarks=True]{hyperref}
+
+%opening
+\title{lstm}
+\author{wanghao}
+
+\begin{document}
+
+\maketitle
+\hypersetup{hidelinks}
+\section{lstm相关论文}
+\subsection{An Empirical Exploration of Recurrent Network Architectures}
+作者希望找到一种最优的RNN结构，或者证明lstm是最好的RNN网络。作者做了大量的实验，然而并没有找到这种网络结构。
+
+作者在三种任务上评估了多种RNN结构，找到了三种表现最好的网络结构，分别为MUT1,MUT2,MUT3,这三种结构都跟GRU很相似。本文得到了以下几个结论：
+\begin{enumerate}
+	\item GRU除了语言模型在所有的任务上都表现得比LSTM好。
+	\item 在forget门使用较大偏移的LSTM在大多数任务上表现得比GRU好。
+	\item 三种门的重要性：遗忘门>输入门>输出门,（但在音乐数据集中移除输入门和输出门表现最好）。
+	\item 给遗忘门添加一个很大的偏移能够有效提高LSTM的效果。
+\end{enumerate}
+	
+
+[1]国泰君安证券《安防视频监控，开启深度智能新时代》2017.06
+
+@article{黄铁军2013支持监控视频高效压缩与识别的,
+	title={支持监控视频高效压缩与识别的IEEE1857标准},
+	author={黄铁军 and 张贤国 and 田永鸿 and 马思伟 and 高文},
+	journal={电子产品世界},
+	number={7},
+	pages={22-26},
+	year={2013},
+}
+
+@misc{huangsurveillance,
+	title={Surveillance video: the biggest big data. Computing Now 7 (2)(2014)},
+	author={Huang, T}
+}
+@article{Huang2015Intelligent,
+	title={Intelligent visual surveillance: A review},
+	author={Huang, K. Q. and Chen, X. T. and Kang, Y. F. and Tan, T. N.},
+	journal={Chinese Journal of Computers},
+	volume={38},
+	year={2015},
+}
+@article{黄凯奇2015智能视频监控技术综述,
+	title={智能视频监控技术综述},
+	author={黄凯奇 and 陈晓棠 and 康运锋 and 谭铁牛},
+	journal={计算机学报},
+	volume={20},
+	number={6},
+	pages={1093-1118},
+	year={2015},
+}
+@article{施家栋2008基于光流的人体运动实时检测方法,
+	title={基于光流的人体运动实时检测方法},
+	author={施家栋 and 王建中 and 王红茹},
+	journal={北京理工大学学报},
+	volume={28},
+	number={9},
+	pages={794-797},
+	year={2008},
+}
+@phdthesis{王栓1999基于差分图象的运动目标检测与跟踪及人脸定位,
+	title={基于差分图象的运动目标检测与跟踪及人脸定位},
+	author={王栓},
+	year={1999},
+}
+@inproceedings{pal2010robust,
+	title={Robust codebook-based video background subtraction},
+	author={Pal, Amit and Schaefer, Gerald and Celebi, M Emre},
+	booktitle={2010 IEEE International Conference on Acoustics, Speech and Signal Processing},
+	pages={1146--1149},
+	year={2010},
+	organization={IEEE}
+}
+@phdthesis{周建锋2009基于光流的运动目标检测方法研究,
+	title={基于光流的运动目标检测方法研究},
+	author={周建锋},
+	school={哈尔滨工业大学},
+	year={2009},
+}
+@article{张晓华2012基于差分法的运动目标检测设计,
+	title={基于差分法的运动目标检测设计},
+	author={张晓华 and 段美霞},
+	journal={河南工程学院学报(自然科学版)},
+	volume={24},
+	number={1},
+	pages={67-70},
+	year={2012},
+}
+@phdthesis{马凡2013智能视频监控中的背景建模算法研究,
+	title={智能视频监控中的背景建模算法研究},
+	author={马凡},
+	school={华中科技大学},
+	year={2013},
+}
+@inproceedings{李小鹏2006若干背景建模方法的分析和比较,
+	title={若干背景建模方法的分析和比较},
+	author={李小鹏 and 严严 and 章毓晋},
+	booktitle={第十三届全国图象图形学学术会议论文集},
+	year={2006},
+}
+@article{Wren1997Pfinder,
+	title={Pfinder: real-time tracking of the human body},
+	author={Wren, C. R. and Azarbayejani, A. and Darrell, T. and Pentland, A. P.},
+	journal={IEEE Transactions on Pattern Analysis & Machine Intelligence},
+	volume={19},
+	number={7},
+	pages={780-785},
+	year={1997},
+}
+@inproceedings{Stauffer1999Adaptive,
+	title={Adaptive background mixture models for real-time tracking},
+	author={Stauffer, Chris and Grimson, W. E. L.},
+	booktitle={IEEE Computer Society Conference on Computer Vision & Pattern Recognition},
+	year={1999},
+}
+@article{Haritaoglu2000W4,
+	title={W4: Real-Time Surveillance of People and Their Activities},
+	author={Haritaoglu, Ismail and Harwood, David and Davis, Larry S.},
+	journal={IEEE Transactions on Pattern Analysis & Machine Intelligence},
+	volume={22},
+	number={8},
+	pages={809-830},
+	year={2000},
+}
+@inproceedings{elgammal2000non,
+	title={Non-parametric model for background subtraction},
+	author={Elgammal, Ahmed and Harwood, David and Davis, Larry},
+	booktitle={European conference on computer vision},
+	pages={751--767},
+	year={2000},
+	organization={Springer}
+}
+@article{Elgammal2002Background,
+	title={Background and Foreground Modeling Using Nonparametric Kernel Density for Visual Surveillance},
+	author={Elgammal, Ahmed and Duraiswami, Ramani and Harwood, David and Davis, Larry S.},
+	journal={Proc IEEE},
+	volume={90},
+	number={7},
+	pages={1151-1163},
+	year={2002},
+}
+@inproceedings{Zhou2007Cast,
+	title={Cast Shadow Removal Combining Local and Global Features},
+	author={Zhou, Liu and Huang, Kaiqi and Tan, Tieniu and Wang, Liangsheng},
+	booktitle={IEEE Conference on Computer Vision & Pattern Recognition},
+	year={2007},
+}
+@article{kim2005real,
+	title={Real-time foreground--background segmentation using codebook model},
+	author={Kim, Kyungnam and Chalidabhongse, Thanarat H and Harwood, David and Davis, Larry},
+	journal={Real-time imaging},
+	volume={11},
+	number={3},
+	pages={172--185},
+	year={2005},
+	publisher={Elsevier}
+}
+@inproceedings{chalidabhongse2003perturbation,
+	title={A perturbation method for evaluating background subtraction algorithms},
+	author={Chalidabhongse, Thanarat Horprasert and Kim, Kyungnam and Harwood, David and Davis, Larry},
+	booktitle={Joint IEEE International Workshop on Visual Surveillance and Performance Evaluation of Tracking and Surveillance},
+	pages={11--12},
+	year={2003},
+	organization={Citeseer}
+}
+@article{Maddalena2010A,
+	title={A fuzzy spatial coherence-based approach to background/foreground separation for moving object detection},
+	author={Maddalena, Lucia and Petrosino, Alfredo},
+	journal={Neural Computing & Applications},
+	volume={19},
+	number={2},
+	pages={179-186},
+	year={2010},
+}
+@inproceedings{Maddalena2012The,
+	title={The SOBS algorithm: What are the limits?},
+	author={Maddalena, L. and Petrosino, A.},
+	booktitle={Computer Vision & Pattern Recognition Workshops},
+	year={2012},
+}
+@inproceedings{Barnich2009ViBE,
+	title={ViBE: A powerful random technique to estimate the background in video sequences},
+	author={Barnich, Olivier and Droogenbroeck, Marc Van},
+	booktitle={IEEE International Conference on Acoustics},
+	year={2009},
+}
+@article{Olivier2011ViBe,
+	title={ViBe: a universal background subtraction algorithm for video sequences},
+	author={Olivier, Barnich and Marc, Van Droogenbroeck},
+	journal={IEEE Transactions on Image Processing},
+	volume={20},
+	number={6},
+	pages={1709-1724},
+	year={2011},
+}
+@article{cucchiara2003detecting,
+	title={Detecting moving objects, ghosts, and shadows in video streams},
+	author={Cucchiara, Rita and Grana, Costantino and Piccardi, Massimo and Prati, Andrea},
+	journal={IEEE transactions on pattern analysis and machine intelligence},
+	volume={25},
+	number={10},
+	pages={1337--1342},
+	year={2003},
+	publisher={IEEE}
+}
+
+@inproceedings{Hofmann2012Background,
+	title={Background segmentation with feedback: The Pixel-Based Adaptive Segmenter},
+	author={Hofmann, Martin and Tiefenbacher, Philipp and Rigoll, Gerhard},
+	booktitle={Computer Vision & Pattern Recognition Workshops},
+	year={2012},
+}
+
+@article{Marko2006A,
+	title={A texture-based method for modeling the background and detecting moving objects},
+	author={Marko, Heikkl? and Matti, Pietik?Inen},
+	journal={IEEE Trans on Pattern Analysis & Machine Intelligence},
+	volume={28},
+	number={4},
+	pages={657-662},
+	year={2006},
+}
+@article{Ojala2002Multiresolution,
+	title={Multiresolution Gray-Scale and Rotation Invariant Texture Classification with Local Binary Patterns},
+	author={Ojala, Timo and Pietikäinen, Matti and Mäenpää, Topi},
+	journal={IEEE Transactions on Pattern Analysis & Machine Intelligence},
+	volume={24},
+	number={7},
+	pages={971-987},
+	year={2002},
+}
+@article{屈志毅2012基于可信度评估的背景建模方法,
+	title={基于可信度评估的背景建模方法},
+	author={屈志毅 and 田楠 and 温莉娟},
+	journal={计算机应用},
+	volume={32},
+	number={6},
+	pages={1532-1535},
+	year={2012},
+}
+@article{李峰2012融合码本和纹理的双层视频背景建模方法,
+	title={融合码本和纹理的双层视频背景建模方法},
+	author={李峰 and 周荷琴},
+	journal={中国科学技术大学学报},
+	volume={42},
+	number={2},
+	pages={99-105},
+	year={2012},
+}
+@article{桑农2013基于字典学习的背景建模,
+	title={基于字典学习的背景建模},
+	author={桑农 and 张涛 and 李斌 and 吴翔},
+	journal={华中科技大学学报（自然科学版）},
+	volume={41},
+	number={9},
+	pages={28-31},
+	year={2013},
+}
+
+@article{王华2017复杂背景下改进视觉背景提取的前景检测算法,
+	title={复杂背景下改进视觉背景提取的前景检测算法},
+	author={王华 and 李艾华 and 崔智高 and 方浩 and 石松},
+	journal={计算机应用研究},
+	volume={34},
+	number={4},
+	pages={1261-1264},
+	year={2017},
+}
+@article{李炜2016一种基于帧间差分的混合高斯背景建模,
+	title={一种基于帧间差分的混合高斯背景建模},
+	author={李炜 and 张晓滨},
+	journal={微处理机},
+	volume={37},
+	number={2},
+	pages={70-72},
+	year={2016},
+}
+@article{邓利平2016一种改进的混合高斯学习自适应背景建模算法,
+	title={一种改进的混合高斯学习自适应背景建模算法},
+	author={邓利平 and 李明东 and 邹海洋},
+	journal={西华师范大学学报（自然科学版）},
+	volume={37},
+	number={3},
+	pages={349-353},
+	year={2016},
+}
+
+@article{李勃2011基于,
+	title={基于ST-CSLBP的混合时空背景建模算法},
+	author={李勃 and 郁健 and 江登表 and 陈启美 and 张震纬},
+	journal={仪器仪表学报},
+	volume={32},
+	number={12},
+	pages={2781-2786},
+	year={2011},
+}
+@article{谭文明2010基于中心对称局部二值模式的背景建模方法研究,
+	title={基于中心对称局部二值模式的背景建模方法研究},
+	author={谭文明 and 李斌 and 张文聪},
+	journal={中国科学技术大学学报},
+	volume={40},
+	number={11},
+	pages={1112-1116},
+	year={2010},
+}
+@article{Babaee2017A,
+	title={A Deep Convolutional Neural Network for Background Subtraction},
+	author={Babaee, Mohammadreza and Dinh, Duc Tung and Rigoll, Gerhard},
+	journal={Pattern Recognition},
+	year={2017},
+}
+@inproceedings{carreira2017quo,
+	title={Quo vadis, action recognition? a new model and the kinetics dataset},
+	author={Carreira, Joao and Zisserman, Andrew},
+	booktitle={proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+	pages={6299--6308},
+	year={2017}
+}
+@article{Hochreiter1997Long,
+	title={Long Short-Term Memory},
+	author={Hochreiter, Sepp and Schmidhuber, Jürgen},
+	journal={Neural Computation},
+	volume={9},
+	number={8},
+	pages={1735-1780},
+	year={1997},
+}
+@inproceedings{yue2015beyond,
+	title={Beyond short snippets: Deep networks for video classification},
+	author={Yue-Hei Ng, Joe and Hausknecht, Matthew and Vijayanarasimhan, Sudheendra and Vinyals, Oriol and Monga, Rajat and Toderici, George},
+	booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition},
+	pages={4694--4702},
+	year={2015}
+}
+@article{Shuiwang20133D,
+	title={3D convolutional neural networks for human action recognition},
+	author={Shuiwang, Ji and Ming, Yang and Kai, Yu},
+	journal={IEEE Transactions on Pattern Analysis & Machine Intelligence},
+	volume={35},
+	number={1},
+	pages={221-231},
+	year={2013},
+}
+@inproceedings{simonyan2014two,
+	title={Two-stream convolutional networks for action recognition in videos},
+	author={Simonyan, Karen and Zisserman, Andrew},
+	booktitle={Advances in neural information processing systems},
+	pages={568--576},
+	year={2014}
+}
+
+[43] Feichtenhofer C, Fan H, Malik J, et al. SlowFast networks for video recognition[J]. arXiv preprint arXiv:1812.03982, 2018.
+
+@article{Howard2017MobileNets,
+	title={MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications},
+	author={Howard, Andrew G. and Zhu, Menglong and Bo, Chen and Kalenichenko, Dmitry and Wang, Weijun and Weyand, Tobias and Andreetto, Marco and Adam, Hartwig},
+	year={2017},
+}
+@article{Sandler2018MobileNetV2,
+	title={MobileNetV2: Inverted Residuals and Linear Bottlenecks},
+	author={Sandler, Mark and Howard, Andrew and Zhu, Menglong and Zhmoginov, Andrey and Liang-Chieh Chen},
+	year={2018},
+}
+@article{Shimodaira2000Improving,
+	title={Improving predictive inference under covariate shift by weighting the log-likelihood function},
+	author={Shimodaira, H.},
+	journal={Journal of Statistical Planning & Inference},
+	volume={90},
+	number={2},
+	pages={227-244},
+	year={2000},
+}
+@article{Raza2016Adaptive,
+	title={Adaptive learning with covariate shift-detection for motor imagery-based brain–computer interface},
+	author={Raza, Haider and Cecotti, Hubert and Li, Yuhua and Prasad, Girijesh},
+	journal={Soft Computing},
+	volume={20},
+	number={8},
+	pages={3085-3096},
+	year={2016},
+}
+@inproceedings{Ioffe2015Batch,
+	title={Batch normalization: accelerating deep network training by reducing internal covariate shift},
+	author={Ioffe, Sergey and Szegedy, Christian},
+	booktitle={International Conference on International Conference on Machine Learning},
+	year={2015},
+}
+@article{Srivastava2014Dropout,
+	title={Dropout: A Simple Way to Prevent Neural Networks from Overfitting},
+	author={Srivastava, Nitish and Hinton, Geoffrey and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan},
+	journal={Journal of Machine Learning Research},
+	volume={15},
+	number={1},
+	pages={1929-1958},
+	year={2014},
+}
+@incollection{bottou2010large,
+	title={Large-scale machine learning with stochastic gradient descent},
+	author={Bottou, L{\'e}on},
+	booktitle={Proceedings of COMPSTAT'2010},
+	pages={177--186},
+	year={2010},
+	publisher={Springer}
+}
+[51] Robbins H, Monro S (1951) A stochastic approximation method. The Annals of Mathematical Statistics 22: 327–495.
+@inproceedings{darken1992learning,
+	title={Learning rate schedules for faster stochastic gradient search},
+	author={Darken, Christian and Chang, Joseph and Moody, John},
+	booktitle={Neural Networks for Signal Processing II Proceedings of the 1992 IEEE Workshop},
+	pages={3--12},
+	year={1992},
+	organization={IEEE}
+}
+@article{Qian1999On,
+	title={On the momentum term in gradient descent learning algorithms},
+	author={Qian, Ning},
+	journal={Neural Netw},
+	volume={12},
+	number={1},
+	pages={145-151},
+	year={1999},
+}
+@inproceedings{sutskever2013importance,
+	title={On the importance of initialization and momentum in deep learning},
+	author={Sutskever, Ilya and Martens, James and Dahl, George and Hinton, Geoffrey},
+	booktitle={International conference on machine learning},
+	pages={1139--1147},
+	year={2013}
+}
+
+@article{Duchi2011Adaptive,
+	title={Adaptive Subgradient Methods for Online Learning and Stochastic Optimization},
+	author={Duchi, John and Hazan, Elad and Singer, Yoram},
+	journal={Journal of Machine Learning Research},
+	volume={12},
+	number={7},
+	pages={257-269},
+	year={2011},
+}
+
+@article{zeiler2012adadelta,
+	title={ADADELTA: an adaptive learning rate method},
+	author={Zeiler, Matthew D},
+	journal={arXiv preprint arXiv:1212.5701},
+	year={2012}
+}
+
+@article{kingma2014adam,
+	title={Adam: A method for stochastic optimization},
+	author={Kingma, Diederik P and Ba, Jimmy},
+	journal={arXiv preprint arXiv:1412.6980},
+	year={2014}
+}
+
+@inproceedings{wang2014cdnet,
+	title={CDnet 2014: an expanded change detection benchmark dataset},
+	author={Wang, Yi and Jodoin, Pierre-Marc and Porikli, Fatih and Konrad, Janusz and Benezeth, Yannick and Ishwar, Prakash},
+	booktitle={Proceedings of the IEEE conference on computer vision and pattern recognition workshops},
+	pages={387--394},
+	year={2014}
+}
+@inproceedings{krizhevsky2012imagenet,
+	title={Imagenet classification with deep convolutional neural networks},
+	author={Krizhevsky, Alex and Sutskever, Ilya and Hinton, Geoffrey E},
+	booktitle={Advances in neural information processing systems},
+	pages={1097--1105},
+	year={2012}
+}
+@inproceedings{Goyette2012changedetection,
+	title={changedetection.net: A New Change Detection Benchmark Dataset},
+	author={Goyette, Nil and Jodoin, Pierre Marc and Porikli, Fatih and Konrad, Janusz and Ishwar, Prakash},
+	booktitle={Computer Vision & Pattern Recognition Workshops},
+	year={2012},
+}
+@article{Ren2017Object,
+	title={Object Detection Networks on Convolutional Feature Maps},
+	author={Ren, S. and He, K. and Girshick, R and Zhang, X. and Sun, J.},
+	journal={IEEE Transactions on Pattern Analysis & Machine Intelligence},
+	volume={39},
+	number={7},
+	pages={1476-1481},
+	year={2017},
+}
+@article{Quinlan1986Induction,
+	title={Induction on decision tree},
+	author={Quinlan, J. R.},
+	journal={Machine Learning},
+	volume={1},
+	number={1},
+	pages={81-106},
+	year={1986},
+}
+
+\end{document}
